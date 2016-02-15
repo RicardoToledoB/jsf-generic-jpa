@@ -46,7 +46,7 @@ public class GenericDAOImpl<T, PK extends Serializable> implements GenericDAO<T,
 
     @Override
     public List<T> list() {
-        String sql = "select t from" + clazz.getSimpleName() + "t";
+        String sql = "select t from " + clazz.getSimpleName() + " t";
         Query query = em.createQuery(sql);
         List<T> list = query.getResultList();
         return list;
